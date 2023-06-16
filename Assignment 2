@@ -1,0 +1,38 @@
+#Arithmetic Operator
+a=50
+b=25
+print("floor division: ",a//b)
+print("exponent: ",a**b)
+
+#Assignment Operators
+a/=1
+print("/=",a)
+a=50
+a**=1
+print("**=",a)
+a=50
+
+#Comparision Operators
+a=50
+print("==",a==b)
+print("!=",a!=b)
+
+#Logical Operators
+a=True
+b=False
+print("and",a and b)
+print("or",a or b)
+print("not",not b)
+
+#Bitwise Operators
+print("bitwise &",a&b)
+print("bitwise <<",a<<b)
+
+#Identity Operator
+print("is",a is b)
+print("is not",a is not b)
+
+#Membership Operators
+a="OM"
+print('O' in a)
+print("Y" not in a)
