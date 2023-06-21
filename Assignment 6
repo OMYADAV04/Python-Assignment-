@@ -1,0 +1,55 @@
+#Create a function named ds with parameters roll_no and name
+def ds(roll_no, name):
+   
+    #List
+    lst = [roll_no, name]
+    print("List:", lst)
+    
+    #Tuple
+    tpl = (roll_no, name)
+    print("Tuple:", tpl)
+   
+    #Set
+    st = {roll_no, name}
+    print("Set:", st)
+   
+    #Dictionary
+    dct = {'roll_no': roll_no, 'name': name}
+    print("Dictionary:", dct)
+    
+    
+    # Change values during runtime
+   
+    #List
+    lst[0] = 69  
+    print("List:", lst)
+   
+    #Tuple   
+    tpl = (70, 'Jatin')  
+    print("Tuple:", tpl)
+    
+    #Set
+    st.add('Om')  
+    print("Set:", st)
+    
+    #Dictionary
+    dct['name'] = 'Aryan' 
+    print("Dictionary:", dct)
+    
+    
+    # Delete the data structures
+    
+    #List
+    del lst
+   
+    #Tuple
+    del tpl
+    
+    #Set
+    del st
+    
+    #Dictionary
+    del dct
+
+#Calling the ds Function   
+ds(70,'Jatin')
