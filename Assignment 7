@@ -1,0 +1,24 @@
+# 1.Create a function with default parameter "file" storing the file path
+def append_to_file(file="data.txt"):
+    try:
+        # 2.Open the file in append mode
+        with open(file, "a") as f:
+           
+          # 3.Use writelines() method to add your roll number, name, and class
+            roll_number = input("Enter your roll number: ")
+            name = input("Enter your name: ")
+            class_name = input("Enter your class: ")
+            f.writelines([roll_number + "\n", name + "\n", class_name + "\n"])
+
+        # 4.Use readines() method to print your data in the prompt
+        with open(file, "r") as f:
+            print(f.read())
+
+    except FileNotFoundError as e:
+        print(f"File '{file}' not found. Error: {str(e)}")
+
+    except Exception as e:
+        print("An error occurred:", str(e))
+
+# Call the function
+append_to_file()
