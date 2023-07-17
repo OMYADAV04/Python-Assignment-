@@ -1,0 +1,26 @@
+#import statements
+import tkinter as tk
+import webbrowser as wb
+
+obj=tk.Tk(className="Flipkart")
+
+#input field
+e=tk.Entry(obj,
+           font=("Algerian",30),
+           width=50)
+e.grid()
+
+def display():
+    s=e.get()
+    print(s)
+    wb.open("https://www.flipkart.com/search?q="+s)
+    
+#button
+b=tk.Button(obj,text="Submit",
+            font=("Algerian",30),
+            activebackground="red",
+            command=display)
+
+b.place(x=50,y=100)
+
+obj.mainloop()
