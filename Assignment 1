@@ -1,0 +1,10 @@
+# Get three numbers from the user
+n1 = int(input("Please enter the first number: "))
+n2 = int(input("Please enter the second number: "))
+n3 = int(input("Please enter the third number: "))
+
+# Calculate the average of the three numbers
+average = (n1 + n2 + n3) / 3
+
+# Display the result
+print("The average of", n1, ",", n2, ",", n3, "is:", average)
