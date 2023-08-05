@@ -1,0 +1,34 @@
+class A:
+    def __init__(self, a, b, c):
+        self.__a = a  # Private member (indicated by double underscore)
+        self._b = b   # Protected member (indicated by single underscore)
+        self.c = c    # Public member
+
+    def display(self):
+        print("Values in class A:")
+        print("a:", self.__a)
+        print("b:", self._b)
+        print("c:", self.c)
+
+
+class B(A):
+    def __init__(self, a, b, c):
+        super().__init__(a, b, c)
+
+    def display(self):
+        try:
+            print("Values in class B:")
+            print("a:", self._A__a)  # Accessing "private" member (Name mangling)
+            print("b:", self._b)
+            print("c:", self.c)
+        except AttributeError as e:
+            print("Exception caught:", e)
+            print("Error: Cannot access 'private' member '__a'")
+
+
+# Creating objects and invoking display method
+objA = A(1, 2, 3)
+objA.display()
+
+objB = B(4, 5, 6)
+objB.display()
